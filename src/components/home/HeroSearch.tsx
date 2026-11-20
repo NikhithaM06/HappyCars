@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, Suspense, useEffect, useMemo, useState } from "react";
 import { getCars } from "@/services/catalog";
 import { uniqueSorted } from "@/lib/format";
+import type { BodyType } from "@/lib/types";
 
 export const MIN_PRICE = 500000;
 export const MAX_PRICE = 5000000;
@@ -68,9 +69,9 @@ export function VehicleFilterPanel({ mode = "hero" }: { mode?: "hero" | "page" }
   }, [cars]);
 
   const categoryOptions = useMemo(() => {
-    const supportedCategories = ["Hatchback", "SUV", "Sedan", "MPV", "Coupe"];
+    const supportedCategories: BodyType[] = ["Hatchback", "SUV", "Sedan", "MPV", "Coupe"];
     const availableBodies = new Set(cars.map((car) => car.body));
-    const active = supportedCategories.filter((cat) => availableBodies.has(cat as any));
+    const active = supportedCategories.filter((cat) => availableBodies.has(cat));
     return [{ value: "", label: "All Cars" }, ...active.map((cat) => ({ value: cat, label: cat }))];
   }, [cars]);
 
