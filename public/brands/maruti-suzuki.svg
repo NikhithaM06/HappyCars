@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" fill="none" aria-hidden="true">
+  <path
+    d="M42 7L54.8 14.8L49.2 18.5L41.8 14L37.7 16.5L54.8 26.7V28.9L42 36.6L29.2 28.9L34.8 25.2L42.2 29.7L46.3 27.2L29.2 17V14.8L42 7Z"
+    fill="#E30613"
+  />
+  <text
+    x="42"
+    y="53"
+    fill="#004C97"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13.5"
+    font-weight="800"
+    letter-spacing="0.8"
+    text-anchor="middle"
+  >SUZUKI</text>
+</svg>
